@@ -12,14 +12,14 @@ function DataFetching() {
       .catch((err) => {
         console.error(err)
       })
-  })
+  },[])
   return (
-    <div className="box-border px-3 py-2 border-gray-400">
-      <div className="border-gray-400 divide-y text-left">
-        {
-          posts.map(post => <p className="text-blue-700 px-3 py-2" key={post.id}>{ post.title }</p>)
-        }
-      </div>
+    <div className="flex flex-wrap box-border px-3 py-2 border-gray-400">
+      {
+        posts.map(post => 
+          <div className="text-gray-600 text-leftgit px-3 py-2 w-1/5 space-x-2 border-2" key={post.id}>{ post.body }</div>
+        )
+      }
     </div>
   )
 }

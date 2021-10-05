@@ -1,15 +1,14 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import HookCounterArray from './components/HookCounterArray';
 import DataFetching from './components/DataFetching';
-
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      {/* <HookCounterArray /> */}
-      <DataFetching />
+    <div className="App flex">
+      <Sidebar />
+      <div className="w-4/5">
+        <DataFetching />
+      </div>
     </div>
   );
 }
